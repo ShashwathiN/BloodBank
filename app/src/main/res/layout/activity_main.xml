@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".login"
+tools:ignore="ExtraText">
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="#751111"
+        android:src="@drawable/backbutton_foreground" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="80dp"
+        android:background="#751111"
+        android:text="\nBlood Bank Management System\n"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+<RelativeLayout
+    android:id="@+id/relative"
+    android:layout_width="350dp"
+    android:layout_height="350dp"
+    android:layout_marginStart="25dp"
+    android:layout_marginTop="200dp"
+    android:background="#751111">
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="42dp"
+        android:background="@color/white"
+        android:drawablePadding="20dp"
+        android:hint="Username"
+        android:padding="20dp"
+        android:textColor="#751111"
+        android:textColorHint="#751111" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="322dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="44dp"
+        android:background="@color/white"
+        android:inputType="textPassword"
+        android:drawablePadding="20dp"
+        android:hint="Password"
+        android:padding="20dp"
+        android:textColor="#751111"
+        android:textColorHint="#751111" />
+
+    <TextView
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/password"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="31dp"
+        android:text="New user? Register here"
+        android:textColor="@color/white" />
+
+</RelativeLayout>
+
+    <Button
+
+        android:id="@+id/Loginbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="75dp"
+        android:layout_below="@+id/relative"
+        android:layout_marginStart="156dp"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="@color/white"
+        android:text="Login"
+        android:textColor="#751111" />
+
+
+
+</RelativeLayout>
+

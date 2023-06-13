@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".donor"
+    android:background="@color/white"
+    >
+
+
+
+    <ImageView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="80dp"
+        android:background="#751111"
+        android:src="@drawable/backbutton_foreground" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginLeft="50dp"
+        android:background="#751111"
+        android:text="\nDonor\n"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
+
+    <LinearLayout
+        android:id="@+id/linearlayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="5dp">
+
+        <ImageButton
+            android:id="@+id/newentry"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+
+            android:layout_marginEnd="5dp"
+            android:background="#751111"
+            android:src="@android:drawable/ic_menu_add"
+            android:text="New Entry"
+            android:textColor="@color/white"
+            android:textSize="13sp" />
+
+        <ImageButton
+            android:id="@+id/delete"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_menu_delete"
+            android:background="#751111"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:id="@+id/update"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:src="@android:drawable/ic_menu_edit"
+            android:background="#751111"
+            android:textColor="@color/white" />
+
+        <SearchView
+            android:id="@+id/search_bar"
+            android:queryHint="Type here"
+            android:layout_width="260dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/ic_launcher_background"
+            />
+    </LinearLayout>
+<HorizontalScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/linearlayout">
+    <TableLayout
+        android:id="@+id/tablelayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="5dp">
+
+    </TableLayout>
+</HorizontalScrollView>
+
+
+
+
+</RelativeLayout>
