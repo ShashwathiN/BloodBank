@@ -58,7 +58,7 @@ public class request extends AppCompatActivity {
             }
         });
         newentry=findViewById(R.id.newentry);
-        delete=findViewById(R.id.delete);
+        //delete=findViewById(R.id.delete);
         stk =  findViewById(R.id.tablelayout);
         update=findViewById(R.id.update);
         searchView=findViewById(R.id.search_bar);
@@ -116,7 +116,7 @@ public class request extends AppCompatActivity {
                 return false;
             }
         });
-        delete.setOnClickListener(new View.OnClickListener() {
+        /*delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
             int checked=0;
@@ -139,7 +139,7 @@ public class request extends AppCompatActivity {
                     Toast.makeText(request.this, "Data deleted successfully", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -170,7 +170,7 @@ public class request extends AppCompatActivity {
                     intent.putExtra("id",m);
                     intent.putExtra("name", name.getText().toString());
                     intent.putExtra("amount", amount.getText().toString());
-                    intent.putExtra("blood", blood.getText().toString());
+                    intent.putExtra("blood", "\t\t"+blood.getText().toString());
                     intent.putExtra("phone", phone.getText().toString());
 
                     startActivity(intent);
@@ -208,12 +208,12 @@ public class request extends AppCompatActivity {
         });
     }
 
-    public void deletetable(String str,String id,String blood_group) {
+    /*public void deletetable(String str,String id,String blood_group) {
         database=FirebaseDatabase.getInstance("https://blood-ad655-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("requestinfo");
         database.child(str).removeValue();
 
     }
-
+*/
 
     public void addTable(String m,String name,String phone, String blood, String amount) {
         TableRow tbrow0 = new TableRow(this);

@@ -26,7 +26,7 @@ public class update_request extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_update_request);
         finish = findViewById(R.id.finish);
         clear = findViewById(R.id.clear);
         image = findViewById(R.id.back);
@@ -67,7 +67,6 @@ public class update_request extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String pblood= intent.getStringExtra("blood");
-                pblood=pblood.replaceAll("\\s","");
                 donorinfo u = new donorinfo(name.getText().toString(), phone.getText().toString(),pblood, pamount, Calendar.getInstance().getTime());
                 if(name.getText().toString().equals("")||phone.getText().toString().isEmpty()||phone.getText().toString().length()!=10){
                     Toast.makeText(update_request.this, "Please enter all the details", Toast.LENGTH_SHORT).show();

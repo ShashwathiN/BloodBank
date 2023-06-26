@@ -26,7 +26,7 @@ public class update_donor extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.activity_update_donor);
         finish = findViewById(R.id.finish);
         clear = findViewById(R.id.clear);
         image = findViewById(R.id.back);
@@ -44,12 +44,8 @@ public class update_donor extends AppCompatActivity {
         pphone=pphone.replaceAll("\\s","");
 
         phone.setText(pphone);
-
         spinner.setEnabled(false);
-
         String m=intent.getStringExtra("id");
-
-
         name = findViewById(R.id.name);
         amount = findViewById(R.id.amount);
         name.setText(pname);
@@ -65,9 +61,8 @@ public class update_donor extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                db.getReference().child("donorinfo").child("").child("" + m).removeValue();
                 String pblood= intent.getStringExtra("blood");
-                pblood=pblood.replaceAll("\\s","");
-
                 donorinfo u = new donorinfo(name.getText().toString(), phone.getText().toString(),pblood, pamount, Calendar.getInstance().getTime());
                 if(name.getText().toString().equals("")||phone.getText().toString().length()!=10||amount.getText().toString().equals("")){
                     Toast.makeText(update_donor.this, "Please enter all the fields with valid details", Toast.LENGTH_SHORT).show();

@@ -52,7 +52,7 @@ public class donor extends AppCompatActivity {
             }
         });
         newentry=findViewById(R.id.newentry);
-        delete=findViewById(R.id.delete);
+       // delete=findViewById(R.id.delete);
         stk =  findViewById(R.id.tablelayout);
         update=findViewById(R.id.update);
         searchView=findViewById(R.id.search_bar);
@@ -110,7 +110,7 @@ public class donor extends AppCompatActivity {
                 return false;
             }
         });
-        delete.setOnClickListener(new View.OnClickListener() {
+        /*delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 int checked=0;
@@ -133,7 +133,7 @@ int checked=0;
                     Toast.makeText(donor.this, "Data deleted successfully", Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        });*/
         update.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -147,9 +147,7 @@ int checked=0;
                         name=tbr.findViewById(nameid);
                         blood=tbr.findViewById(bloodid);
                         amount=tbr.findViewById(amountid);
-phone=tbr.findViewById(phoneid);
-date=tbr.findViewById(dateid);
-
+                        phone=tbr.findViewById(phoneid);
                     }
                 }
                 if(count==0){
@@ -164,7 +162,7 @@ date=tbr.findViewById(dateid);
                     intent.putExtra("id",m);
                     intent.putExtra("name", name.getText().toString());
                     intent.putExtra("amount", amount.getText().toString());
-                    intent.putExtra("blood", blood.getText().toString());
+                    intent.putExtra("blood", "\t\t"+blood.getText().toString());
                     intent.putExtra("phone", phone.getText().toString());
                     startActivity(intent);
                 }
@@ -201,12 +199,12 @@ date=tbr.findViewById(dateid);
         });
     }
 
-    public void deletetable(String str,String id,String blood_group) {
+    /*public void deletetable(String str,String id,String blood_group) {
         database=FirebaseDatabase.getInstance("https://blood-ad655-default-rtdb.asia-southeast1.firebasedatabase.app").getReference("donorinfo");
         database.child(str).removeValue();
 
     }
-
+*/
     public void addTable(String m,String name,String phone, String blood, String amount) {
         TableRow tbrow0 = new TableRow(donor.this);
         tbrow0.setId(tabrow);

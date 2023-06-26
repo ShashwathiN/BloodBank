@@ -155,7 +155,9 @@ refresh.setEnabled(false);
                         else if(donor.blood.equals("\t\tO-ve")){
                             onr=onr+new Integer(donor.amount.toString());
                         }
+
                     }
+
 
                 }
 
